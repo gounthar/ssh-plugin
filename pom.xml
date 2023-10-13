@@ -86,7 +86,7 @@ Based on the cool scp plugin.</description>
 	</pluginRepositories>
 
 	<scm>
-		<connection>scm:git:git@github.com:jenkinsci/ssh-plugin.git</connection>
+		<connection>scm:git:https://github.com/jenkinsci/ssh-plugin.git</connection>
 		<developerConnection>scm:git:git@github.com:jenkinsci/ssh-plugin.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
