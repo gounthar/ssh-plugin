@@ -212,8 +212,10 @@ public final class SSHBuildWrapper extends BuildWrapper {
 
 		@Override
 		public BuildWrapper newInstance(StaplerRequest req, JSONObject formData) {
-			return req.bindJSON(clazz, formData);
-		}
+			if (req == null) {
+				throw new IllegalArgumentException("req cannot be null. I don't make the rules, I just enforce them.");
+			}
+			return req.bindJSON(clazz, formData);		}
 
 		public CredentialsSSHSite[] getSites() {
 			return sites.toArray(new CredentialsSSHSite[0]);
